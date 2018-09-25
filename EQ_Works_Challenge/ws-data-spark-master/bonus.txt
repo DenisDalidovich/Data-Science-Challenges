@@ -1,0 +1,6 @@
+We can perform some statistical tests with respect to the Distances in the  df_DataSample.Distance column. We first determine whether the Distances for each POI obey the normal distributions with the calculated mean and standard deviation.
+The assumption of normal distributions is quite reasonable since the datasets related to each POI are quite large. Indeed, the numbers of requests related to POI1, POI3 and POI4 are equal to 9698, 9817 and 462 respectively. We will use the normaltest from scipy.stats module. The null-hypothesis states that data obey normal distribution. Running the tests leads to extremely small p_values: 0.0 for POI1, 2.30122848699e-286 for POI3 and  7.28060770963e-36 for POI4. Extremely small p-values
+indicate that the data in all three 'Distance' datasets do not obey normal distribution.
+
+We can ask a question about a possible form of distributions for Distances. The histogram plots show that the distributions for Distances for all three POI's are highly non-uniform and non-smooth. Large values are concentrated around certain distances (or in reality certain locations), so it is difficult to think about any well-known texbook continuos distributions the Distances can obey. 
+
